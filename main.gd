@@ -1,20 +1,25 @@
 extends Node2D
 
-var body_scene = load("res://scenes/body.tscn")
-var last_body_instance = null # Variable para almascenar al último hijo
+@onready var spawner_pos: Vector2 = $Spawner.global_position
+@onready var cat: Sprite2D = $cat
+var pats_counter = 0
 
-var grow = 1
-var cat_grow = grow * -1 # Cantidad de distancia que crece la cabeza
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 func _process(_delta):
-	$cat.move_cat_head()
-	$cat.spawn_body()
-	
-	
+	pass
 func _input(_event):
 	if Input.is_action_just_pressed("ui_accept"):
-		$cat.move_cat_head()
-		$cat.spawn_body()
+		pet_the_cat()
 		
+func pet_the_cat():
+	pats_counter = pats_counter + 1
+	cat.move_cat_head()
+	cat.spawn_body(spawner_pos)
+	$pats.scale = Vector2(0.5, 0.5)
+	$pats.text = "Le has hecho %s pats al gato" % [pats_counter]
+
+func neighbors ():
+	pet_the_cat()
+	Timer.TIMER_PROCESS_IDLE

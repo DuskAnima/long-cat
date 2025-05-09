@@ -11,4 +11,13 @@ position = Vector2(96, 54)
 zoom = Vector2(6, 6)
 
 [node name="cat" parent="." instance=ExtResource("2_0wfyh")]
-position = Vector2(96, 101)
+position = Vector2(90, 100)
+
+[node name="pats" type="RichTextLabel" parent="."]
+offset_left = 14.0
+offset_top = 43.0
+offset_right = 54.0
+offset_bottom = 83.0
+
+[node name="Spawner" type="Marker2D" parent="."]
+position = Vector2(90, 109)

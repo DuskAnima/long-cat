@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvtq0cqtgqj1h"]
+[gd_scene load_steps=3 format=3 uid="uid://dvtq0cqtgqj1h"]
 
 [ext_resource type="Texture2D" uid="uid://dvg7wb0ulxix2" path="res://assets/cat.png" id="1_myi5k"]
+[ext_resource type="Script" uid="uid://sfh2v6m515iy" path="res://scenes/cat.gd" id="2_se5fe"]
 
 [node name="cat" type="Sprite2D"]
 texture = ExtResource("1_myi5k")
+script = ExtResource("2_se5fe")
+
+[node name="bot" type="Marker2D" parent="."]
+position = Vector2(-5, 8)

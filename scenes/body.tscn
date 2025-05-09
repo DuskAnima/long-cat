@@ -3,4 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b24vti4m3pmgo" path="res://assets/body.png" id="1_jmcoc"]
 
 [node name="body" type="Sprite2D"]
+position = Vector2(-5, -4)
 texture = ExtResource("1_jmcoc")
+centered = false
+
+[node name="bot" type="Marker2D" parent="."]
+position = Vector2(0, 9)

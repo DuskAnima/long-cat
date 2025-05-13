@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bou7nvcvwd1p7"]
+
+[ext_resource type="Script" uid="uid://csdjcrfco16ci" path="res://main.gd" id="1_hakmx"]
+[ext_resource type="PackedScene" uid="uid://dvtq0cqtgqj1h" path="res://scenes/cat.tscn" id="2_0nr8p"]
+[ext_resource type="FontFile" uid="uid://dfx4yqsrnn6k7" path="res://fonts/m5x7.ttf" id="3_kv812"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_hakmx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(96, 54)
+zoom = Vector2(6, 6)
+
+[node name="cat" parent="." instance=ExtResource("2_0nr8p")]
+position = Vector2(97, 100)
+
+[node name="pats" type="RichTextLabel" parent="."]
+offset_left = 51.0
+offset_right = 235.0
+offset_bottom = 16.0
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("3_kv812")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spawner" type="Marker2D" parent="."]
+position = Vector2(90, 109)

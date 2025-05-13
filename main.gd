@@ -3,6 +3,7 @@ extends Node2D
 @onready var spawner_pos: Vector2 = $Spawner.global_position
 @onready var cat: Sprite2D = $cat
 var pats_counter = 0
+var personas = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
